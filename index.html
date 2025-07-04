@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario de Productos Tecnológicos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="mb-4 text-center">Inventario de Productos Tecnológicos</h1>
+
+    <div class="card">
+      <div class="card-body">
+        <form id="form-producto" class="row g-3">
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Nombre del producto" id="nombre" required>
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Categoría" id="categoria" required>
+          </div>
+          <div class="col-md-2">
+            <input type="number" class="form-control" placeholder="Cantidad" id="cantidad" min="1" required>
+          </div>
+          <div class="col-md-2">
+            <input type="number" class="form-control" placeholder="Precio ($)" id="precio" min="0" step="0.01" required>
+          </div>
+          <div class="col-md-1 d-grid">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped mt-4">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Cantidad</th>
+            <th>Precio ($)</th>
+            <th>Total ($)</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-productos">
+          <!-- Los productos se mostrarán aquí -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal de edición -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditarLabel">Editar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form-editar">
+            <input type="hidden" id="editar-index">
+            <div class="mb-3">
+              <label for="editar-nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="editar-nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="editar-categoria" class="form-label">Categoría</label>
+              <input type="text" class="form-control" id="editar-categoria" required>
+            </div>
+            <div class="mb-3">
+              <label for="editar-cantidad" class="form-label">Cantidad</label>
+              <input type="number" class="form-control" id="editar-cantidad" min="1" required>
+            </div>
+            <div class="mb-3">
+              <label for="editar-precio" class="form-label">Precio ($)</label>
+              <input type="number" class="form-control" id="editar-precio" min="0" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar Cambios</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form-producto');
+    const tabla = document.getElementById('tabla-productos');
+    const formEditar = document.getElementById('form-editar');
+    let productos = JSON.parse(localStorage.getItem('productos')) || [];
+
+    function guardarProductos() {
+      localStorage.setItem('productos', JSON.stringify(productos));
+    }
+
+    function renderProductos() {
+      tabla.innerHTML = '';
+      productos.forEach((producto, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${producto.nombre}</td>
+          <td>${producto.categoria}</td>
+          <td>${producto.cantidad}</td>
+          <td>$${producto.precio.toFixed(2)}</td>
+          <td>$${(producto.cantidad * producto.precio).toFixed(2)}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-1" onclick="abrirModalEditar(${index})">Editar</button>
+            <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${index})">Eliminar</button>
+          </td>
+        `;
+        tabla.appendChild(fila);
+      });
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const categoria = document.getElementById('categoria').value;
+      const cantidad = parseInt(document.getElementById('cantidad').value);
+      const precio = parseFloat(document.getElementById('precio').value);
+
+      const nuevoProducto = { nombre, categoria, cantidad, precio };
+      productos.push(nuevoProducto);
+      guardarProductos();
+      renderProductos();
+      form.reset();
+    });
+
+    function eliminarProducto(index) {
+      productos.splice(index, 1);
+      guardarProductos();
+      renderProductos();
+    }
+
+    function abrirModalEditar(index) {
+      const producto = productos[index];
+      document.getElementById('editar-index').value = index;
+      document.getElementById('editar-nombre').value = producto.nombre;
+      document.getElementById('editar-categoria').value = producto.categoria;
+      document.getElementById('editar-cantidad').value = producto.cantidad;
+      document.getElementById('editar-precio').value = producto.precio;
+      new bootstrap.Modal(document.getElementById('modalEditar')).show();
+    }
+
+    formEditar.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const index = parseInt(document.getElementById('editar-index').value);
+      productos[index] = {
+        nombre: document.getElementById('editar-nombre').value,
+        categoria: document.getElementById('editar-categoria').value,
+        cantidad: parseInt(document.getElementById('editar-cantidad').value),
+        precio: parseFloat(document.getElementById('editar-precio').value)
+      };
+      guardarProductos();
+      renderProductos();
+      bootstrap.Modal.getInstance(document.getElementById('modalEditar')).hide();
+    });
+
+    renderProductos();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
