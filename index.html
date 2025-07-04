@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tienda Tecnológica</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #333; color: #fff; padding: 1rem 0; text-align: center; }
+        nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+        .container { width: 90%; margin: 2rem auto; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .card { background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .card img { max-width: 100%; border-radius: 4px; }
+        .card h3 { margin: 0.5rem 0; }
+        .card p { color: #555; }
+        footer { background: #333; color: #fff; text-align: center; padding: 1rem 0; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TecnoMundo</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Productos Destacados</h2>
+        <div class="products">
+            <div class="card">
+                <img src="images/portatil.png" alt="Portátil Pro X"/>
+                <h3>Portátil Pro X</h3>
+                <p>POTENTE: Rendimiento excepcional para tareas exigentes y edición multimedia.</p>
+            </div>
+            <div class="card">
+                <img src="images/smartphone.png" alt="Smartphone Elite"/>
+                <h3>Smartphone Elite</h3>
+                <p>ESTILO: Pantalla nítida y velocidad óptima para mantenerse conectado en todo momento.</p>
+            </div>
+            <div class="card">
+                <img src="images/auriculares.png" alt="Auriculares Inalámbricos"/>
+                <h3>Auriculares Inalámbricos</h3>
+                <p>CALIDAD: Sonido envolvente y cómodo diseño ergonómico para largas sesiones de uso.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Tienda Tecnológica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
