@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboración en el Proyecto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Fondo gris claro */
+            color: #333; /* Texto en gris oscuro */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Asegura que el cuerpo tenga al menos el 100% de la altura de la ventana */
+        }
+        header {
+            background-color: #1E2A47; /* Azul marino */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        main {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1; /* Esto hace que el main ocupe el espacio disponible, empujando el footer al final */
+        }
+        h1 {
+            color: #f3f4f8; /* Azul marino en encabezados */
+             }
+        h2 {
+            color: #1d305a; /* Azul marino en encabezados */
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .steps {
+            margin-top: 20px;
+        }
+        .steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .steps li {
+            background-color: #f9f9f9; /* Fondo gris suave */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .steps li strong {
+            color: #1E2A47; /* Azul marino en negrita */
+        }
+        footer {
+            background-color: #1E2A47; /* Azul marino */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #f4f4f4; /* Cambio de color al pasar el ratón */
+        }
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+            .steps li {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cómo Colaborar en el Proyecto y Solicitar la Incorporación de Cambios</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Introducción</h2>
+        <p>
+            Como estudiante, tienes la oportunidad de colaborar en proyectos de código abierto o de clase
+            para mejorar tu aprendizaje y contribuir al desarrollo de la comunidad. A continuación, te
+            mostramos los pasos necesarios para investigar cómo colaborar en un proyecto y solicitar que
+            el dueño del proyecto incorpore tus cambios.
+        </p>
+    </section>
+
+    <section class="steps">
+        <h2>Pasos para Colaborar en el Proyecto</h2>
+        <ul>
+            <li>
+                <strong>Investigar el Proyecto:</strong>
+                <p>Revisa la documentación del proyecto para entender cómo funciona, cuáles son las
+                reglas y cómo puedes contribuir.</p>
+            </li>
+            <li>
+                <strong>Clonar el Repositorio:</strong>
+                <p>Usa Git para clonar el repositorio del proyecto en tu máquina local. Esto te permitirá
+                trabajar sobre una copia del código.</p>
+            </li>
+            <li>
+                <strong>Realizar los Cambios:</strong>
+                <p>Haz los cambios necesarios en el proyecto, ya sea corrigiendo errores o agregando nuevas
+                funcionalidades. Asegúrate de seguir las normas del proyecto.</p>
+            </li>
+            <li>
+                <strong>Realizar un Commit:</strong>
+                <p>Una vez que hayas realizado los cambios, realiza un commit con un mensaje claro y conciso.</p>
+            </li>
+            <li>
+                <strong>Subir los Cambios al Repositorio Remoto:</strong>
+                <p>Sube tus cambios al repositorio remoto usando Git para que estén disponibles para el dueño del
+                proyecto.</p>
+            </li>
+            <li>
+                <strong>Crea un Pull Request:</strong>
+                <p>Haz un pull request para que el dueño del proyecto pueda revisar y aprobar tus cambios. Asegúrate de
+                proporcionar una descripción detallada de lo que hiciste y por qué debería ser incorporado al proyecto.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Solicitar la Incorporación de Cambios</h2>
+        <p>
+            Una vez que hayas creado el Pull Request, el siguiente paso es esperar que el dueño del proyecto revise tus cambios.
+            Si todo está en orden, él o ella podrán fusionar tus cambios al proyecto principal. Si es necesario, podrían
+            hacer sugerencias o pedirte que realices algunos ajustes antes de aceptarlos.
+        </p>
+        <p>
+            Es importante ser paciente y respetuoso con el proceso de revisión. Además, siempre puedes hacer
+            seguimiento de tu Pull Request si no obtienes respuesta rápidamente.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Institut Superior Tecnologico "Vicente León" - Latacunga, Ecuador</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">📘 Facebook</a>
+        <a href="https://wa.me/593xxxxxxxxx" target="_blank">💬 WhatsApp</a>
+        <a href="https://www.instagram.com" target="_blank">📸 Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>
