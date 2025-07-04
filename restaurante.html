@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante El Sabor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #fffaf0; color: #333; }
+    header { background-color: #8b0000; color: white; padding: 20px; text-align: center; }
+    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    h2 { margin-bottom: 20px; color: #8b0000; }
+    .menu-item { margin-bottom: 15px; }
+    .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background: #8b0000; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    footer { background: #222; color: white; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Restaurante El Sabor</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio">
+  <h2>Bienvenidos</h2>
+  <p>Descubre los sabores auténticos de la cocina tradicional. En "El Sabor", cada plato es preparado con ingredientes frescos y mucho cariño.</p>
+</section>
+
+<section id="menu">
+  <h2>Menú</h2>
+  <div class="menu-item">
+    <strong>Parrillada Mixta</strong> - $15.00<br/>
+    Carne, pollo, chorizo y guarnición de papas.
+  </div>
+  <div class="menu-item">
+    <strong>Ceviche de Camarón</strong> - $10.00<br/>
+    Fresco y delicioso con toques cítricos.
+  </div>
+  <div class="menu-item">
+    <strong>Arroz con Pollo</strong> - $8.00<br/>
+    Receta tradicional con vegetales y especias.
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galería</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/300x200?text=Plato+1" alt="Plato 1">
+    <img src="https://via.placeholder.com/300x200?text=Plato+2" alt="Plato 2">
+    <img src="https://via.placeholder.com/300x200?text=Interior+del+restaurante" alt="Interior">
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <form onsubmit="enviarFormulario(event)">
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Restaurante El Sabor. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  function enviarFormulario(event) {
+    event.preventDefault();
+    alert('¡Gracias por contactarnos! Te responderemos pronto.');
+  }
+</script>
+
+</body>
+</html>
