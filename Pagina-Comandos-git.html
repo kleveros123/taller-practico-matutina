@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Git Esenciales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #24292e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #0366d6;
+        }
+        .comando {
+            background-color: #e8f0fe;
+            border-left: 5px solid #0366d6;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #c7254e;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #24292e;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comandos Git Más Importantes</h1>
+        <p>Guía rápida de los comandos esenciales para trabajar con Git</p>
+    </header>
+    <main>
+        <h2>🔹 Inicializar un repositorio</h2>
+        <div class="comando">
+            <p><strong>Crear un nuevo repositorio Git en la carpeta actual:</strong></p>
+            <code>git init</code>
+        </div>
+
+        <h2>🔹 Clonar un repositorio</h2>
+        <div class="comando">
+            <p><strong>Clonar un repositorio remoto a tu máquina local:</strong></p>
+            <code>git clone https://github.com/usuario/repositorio.git</code>
+        </div>
+
+        <h2>🔹 Ver estado de los archivos</h2>
+        <div class="comando">
+            <p><strong>Mostrar el estado actual del repositorio (archivos modificados, sin seguimiento, etc.):</strong></p>
+            <code>git status</code>
+        </div>
+
+        <h2>🔹 Añadir cambios al área de preparación</h2>
+        <div class="comando">
+            <p><strong>Añadir un archivo específico:</strong></p>
+            <code>git add nombre-archivo</code>
+            <p><strong>Añadir todos los archivos modificados:</strong></p>
+            <code>git add .</code>
+        </div>
+
+        <h2>🔹 Confirmar cambios</h2>
+        <div class="comando">
+            <p><strong>Guardar los cambios en el repositorio local con un mensaje:</strong></p>
+            <code>git commit -m "Mensaje descriptivo"</code>
+        </div>
+
+        <h2>🔹 Ver historial de commits</h2>
+        <div class="comando">
+            <p><strong>Mostrar el historial de commits:</strong></p>
+            <code>git log</code>
+        </div>
+
+        <h2>🔹 Crear y cambiar de rama</h2>
+        <div class="comando">
+            <p><strong>Crear una nueva rama:</strong></p>
+            <code>git branch nombre-rama</code>
+            <p><strong>Cambiar a la nueva rama:</strong></p>
+            <code>git checkout nombre-rama</code>
+            <p><strong>Crear y cambiar en un solo paso:</strong></p>
+            <code>git checkout -b nombre-rama</code>
+        </div>
+
+        <h2>🔹 Subir cambios al repositorio remoto</h2>
+        <div class="comando">
+            <p><strong>Subir cambios de la rama actual al remoto:</strong></p>
+            <code>git push origin nombre-rama</code>
+        </div>
+
+        <h2>🔹 Traer cambios del repositorio remoto</h2>
+        <div class="comando">
+            <p><strong>Descargar y fusionar cambios del remoto a la rama actual:</strong></p>
+            <code>git pull</code>
+        </div>
+
+        <h2>🔹 Fusionar ramas</h2>
+        <div class="comando">
+            <p><strong>Fusionar una rama en la rama actual:</strong></p>
+            <code>git merge nombre-rama</code>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Taller Práctico - Git Essentials</p>
+    </footer>
+</body>
+</html>
