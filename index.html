@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Zapatillas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛍️ Zapatillas Urbanas</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>¡Encuentra tu estilo único!</h2>
+    <p>Las mejores zapatillas al mejor precio</p>
+  </section>
+
+  <section id="productos" class="productos">
+    <h2>Catálogo</h2>
+    <div class="producto">
+      <img src="https://via.placeholder.com/200" alt="Zapatilla 1">
+      <h3>Zapatilla Nike Air</h3>
+      <p>$89.99</p>
+      <button onclick="agregarCarrito('Zapatilla Nike Air')">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/200" alt="Zapatilla 2">
+      <h3>Zapatilla Adidas Run</h3>
+      <p>$79.99</p>
+      <button onclick="agregarCarrito('Zapatilla Adidas Run')">Añadir al carrito</button>
+    </div>
+    <!-- Agrega más productos aquí -->
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tienda de Zapatillas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
