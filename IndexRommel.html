@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoGalaxy - Concesionario de Autos Deportivos</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #0d47a1;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      header h1 {
+        margin: 0;
+      }
+      nav {
+        background-color: #1565c0;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 0.5em;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        background-image: url("https://www.ocasionplus.com/_next/image?url=https:%2F%2Fwww.ocasionplus.com%2Fwp-content%2Fuploads%2F2024%2F07%2Fclasificacion_coches_segmentos_modelos-scaled.jpg&w=1080&q=75");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 4em 1em;
+        text-align: center;
+      }
+      .hero h2 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+      .hero p {
+        font-size: 1.2em;
+        margin-top: 0.5em;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em;
+      }
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 280px;
+        overflow: hidden;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: scale(1.03);
+      }
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 1em;
+        text-align: center;
+      }
+      .card-content h3 {
+        margin: 0.5em 0 0.2em 0;
+      }
+      .card-content p {
+        margin: 0.2em 0;
+        color: #555;
+      }
+      footer {
+        background-color: #0d47a1;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        margin-top: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>NezuAuto</h1>
+      <p>Tu concesionario de autos deportivos de lujo</p>
+    </header>
+
+    <nav>
+      <a href="#">Inicio</a>
+    </nav>
+
+    <div class="hero">
+      <h2>Encuentra el auto de tus sueños</h2>
+      <p>Los deportivos más icónicos en un solo lugar</p>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://www.latercera.com/resizer/v2/YJWL6QEOLVG2NF4RL7LZSNEYPM.jpeg?auth=f966cd1c7cb7d136cd0a39048626fcf7917a727f0502a1943cc9f7219abf1a27&smart=true&width=800&height=450&quality=70"
+          alt="Nissan Skyline GT-R"
+        />
+        <div class="card-content">
+          <h3>Nissan Skyline GT-R</h3>
+          <p>Legendario JDM | Manual | 45,000 km</p>
+          <p><strong>$85,000</strong></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://jv-imports.at/wp-content/uploads/cm//2/1/218890.jpg"
+          alt="Toyota Supra MK4"
+        />
+        <div class="card-content">
+          <h3>Toyota Supra MK4</h3>
+          <p>Turbo | Manual | 60,000 km</p>
+          <p><strong>$95,000</strong></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrOlU-egCKrqoDECEWpLZ4TkdjPMSDlC9UQw&s"
+          alt="Lamborghini Veneno"
+        />
+        <div class="card-content">
+          <h3>Lamborghini Veneno</h3>
+          <p>Edición limitada | Automático | 2,000 km</p>
+          <p><strong>$4,500,000</strong></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://cdn.ferrari.com/cms/network/media/img/resize/64a69888f7499d002469818b-tofm_1320420_1300x730"
+          alt="Ferrari LaFerrari"
+        />
+        <div class="card-content">
+          <h3>Ferrari LaFerrari</h3>
+          <p>Híbrido | Automático | 5,000 km</p>
+          <p><strong>$3,200,000</strong></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://espirituracer.com/archivos/2023/12/mclaren-p1-rm-sothebys.webp"
+          alt="McLaren P1"
+        />
+        <div class="card-content">
+          <h3>McLaren P1</h3>
+          <p>Híbrido | Automático | 8,500 km</p>
+          <p><strong>$1,500,000</strong></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://soymotor.com/sites/default/files/imagenes/noticia/bugatti-chiron-3-soymotor.jpg"
+          alt="Bugatti Chiron"
+        />
+        <div class="card-content">
+          <h3>Bugatti Chiron</h3>
+          <p>W16 | Automático | 3,500 km</p>
+          <p><strong>$3,800,000</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 NezuAuto - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
